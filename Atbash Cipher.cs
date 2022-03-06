@@ -1,9 +1,4 @@
 
-//This algorithm converts A to Z, B to Y, C to X and so on
-
-// ABCDEFGHIJKLMNOPQRSTUVWXYZ converts this string to
-// ZYXWVUTSRQPONMLKJIHGFEDCBA
-
 using System;
 namespace EncrytionDecryption
 {
@@ -12,10 +7,11 @@ namespace EncrytionDecryption
         static void Main(string[] args)
         {
             string str = Console.ReadLine();
-            string record = "";
-            int x, y;
-            char c;
-            for (int i = 0; i < str.Length; i++)
+            string record = "";//It stores the encrypted string
+            int x, y;//used in calculations 
+            char c;//stores the encrypted character 
+            
+            for (int i = 0; i < str.Length; i++)//this loop iterates the whole string
             {
                 //c=str[i];
                 //if c='B' means c=66
@@ -43,6 +39,8 @@ namespace EncrytionDecryption
                     c=(char)(y+96);
                     record+=c.ToString();
                 }
+                
+                
                 //c=str[i];
                 //if c='4'
                 //x='9'- c
@@ -52,7 +50,8 @@ namespace EncrytionDecryption
                     x='9'-str[i];
                     record+=x.ToString();
                 }
-
+                
+                //space in original string is encrypted as space
                 else if (str[i]==' ')
                 {
                     record+=' ';
