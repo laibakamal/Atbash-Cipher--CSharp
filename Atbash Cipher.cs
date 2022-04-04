@@ -47,7 +47,8 @@ namespace EncrytionDecryption
                 //answer = '5'
                 else if (str[i]>='0'&&str[i]<='9')
                 {
-                    x='9'-str[i];
+                    //x='9'-str[i]; //if str[i]=='9' it will give decimal value of zero whereas decimal ascii value for '0' is 48, so we we need to add '0' here
+                    x='9'-str[i]+'0';
                     record+=x.ToString();
                 }
                 
